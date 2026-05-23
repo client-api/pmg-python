@@ -58,14 +58,6 @@ from .api.quarantine_welcomelist_api import QuarantineWelcomelistApi
 from .api.quarantine_whitelist_api import QuarantineWhitelistApi
 from .api.statistics_api import StatisticsApi
 from .api.version_api import VersionApi
-from .websocket import (
-    TerminalSession,
-    TerminalTarget,
-    VncSession,
-    VncTarget,
-    connect_terminal as _connect_terminal,
-    connect_vnc as _connect_vnc,
-)
 
 
 class Client:
@@ -466,35 +458,3 @@ class Client:
             self._version = VersionApi(api_client=self._api_client)
         return self._version
 
-
-    def connect_terminal(
-        self,
-        target: TerminalTarget,
-        on_message: Optional[Callable[[str], None]] = None,
-        on_close: Optional[Callable[[int, str], None]] = None,
-        on_error: Optional[Callable[[Exception], None]] = None,
-    ) -> TerminalSession:
-        """Open a terminal session against a node, QEMU VM, or LXC container."""
-        return _connect_terminal(
-            self._api_client.configuration,
-            target,
-            on_message=on_message,
-            on_close=on_close,
-            on_error=on_error,
-        )
-
-    def connect_vnc(
-        self,
-        target: VncTarget,
-        on_frame: Optional[Callable[[bytes], None]] = None,
-        on_close: Optional[Callable[[int, str], None]] = None,
-        on_error: Optional[Callable[[Exception], None]] = None,
-    ) -> VncSession:
-        """Open a VNC session against a node shell, QEMU VM, or LXC container."""
-        return _connect_vnc(
-            self._api_client.configuration,
-            target,
-            on_frame=on_frame,
-            on_close=on_close,
-            on_error=on_error,
-        )
