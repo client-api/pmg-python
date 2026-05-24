@@ -1,6 +1,6 @@
 [project]
 name = "clientapi_pmg"
-version = "2026.5.23"
+version = "2026.5.24"
 description = "Proxmox Mail Gateway API"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},
