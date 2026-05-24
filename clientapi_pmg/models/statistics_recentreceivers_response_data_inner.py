@@ -28,7 +28,7 @@ class StatisticsRecentreceiversResponseDataInner(BaseModel):
     StatisticsRecentreceiversResponseDataInner
     """ # noqa: E501
 
-    count: StrictInt = Field(description="The count of incoming not blocked E-Mails")
+    count: int = Field(description="The count of incoming not blocked E-Mails")
 
     receiver: StrictStr = Field(description="The receiver")
 

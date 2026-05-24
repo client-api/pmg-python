@@ -34,7 +34,7 @@ class NodesPbsGetSnapshotsResponseDataInner(BaseModel):
 
     ctime: StrictStr
 
-    size: StrictInt
+    size: int
 
     __properties: ClassVar[List[str]] = ["backup-id", "backup-time", "ctime", "size"]
 

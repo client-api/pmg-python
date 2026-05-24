@@ -28,13 +28,13 @@ class StatisticsRejectcountResponseDataInner(BaseModel):
     StatisticsRejectcountResponseDataInner
     """ # noqa: E501
 
-    index: StrictInt = Field(description="Time index.")
+    index: int = Field(description="Time index.")
 
-    pregreet_rejects: StrictInt = Field(description="PREGREET reject count.")
+    pregreet_rejects: int = Field(description="PREGREET reject count.")
 
-    rbl_rejects: StrictInt = Field(description="RBL reject count.")
+    rbl_rejects: int = Field(description="RBL reject count.")
 
-    time: StrictInt = Field(description="Time (Unix epoch).")
+    time: int = Field(description="Time (Unix epoch).")
 
     __properties: ClassVar[List[str]] = ["index", "pregreet_rejects", "rbl_rejects", "time"]
 

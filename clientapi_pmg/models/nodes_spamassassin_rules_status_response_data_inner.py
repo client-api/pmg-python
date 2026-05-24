@@ -31,7 +31,7 @@ class NodesSpamassassinRulesStatusResponseDataInner(BaseModel):
 
     channel: StrictStr
 
-    last_updated: Optional[StrictInt] = None
+    last_updated: Optional[int] = None
 
     update_avail: PmgBoolean
 

@@ -31,15 +31,15 @@ class StatisticsDetailstatsResponseDataInner(BaseModel):
 
     blocked: PmgBoolean = Field(description="Mail was blocked.")
 
-    bytes: Union[StrictFloat, StrictInt] = Field(description="Mail traffic (Bytes).")
+    bytes: Union[float, int] = Field(description="Mail traffic (Bytes).")
 
     receiver: Optional[StrictStr] = Field(default=None, description="Receiver email. (for sender statistics)")
 
     sender: Optional[StrictStr] = Field(default=None, description="Sender email. (for contact and receiver statistics)")
 
-    spamlevel: Union[StrictFloat, StrictInt] = Field(description="Spam score.")
+    spamlevel: Union[float, int] = Field(description="Spam score.")
 
-    time: StrictInt = Field(description="Receive time stamp")
+    time: int = Field(description="Receive time stamp")
 
     virusinfo: Optional[StrictStr] = Field(default=None, description="Virus name.")
 

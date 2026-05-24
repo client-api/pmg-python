@@ -28,7 +28,7 @@ class QuarantineContentContentResponseData(BaseModel):
     QuarantineContentContentResponseData
     """ # noqa: E501
 
-    bytes: StrictInt = Field(description="Size of raw email.")
+    bytes: int = Field(description="Size of raw email.")
 
     content: StrictStr = Field(description="Raw email data (first 4096 bytes). Useful for preview. NOTE: The  'htmlmail' formatter displays the whole email.")
 
@@ -46,11 +46,11 @@ class QuarantineContentContentResponseData(BaseModel):
 
     spaminfo: List[Any] = Field(description="Information about matched spam tests (name, score, desc, url).")
 
-    spamlevel: Union[StrictFloat, StrictInt] = Field(description="Spam score.")
+    spamlevel: Union[float, int] = Field(description="Spam score.")
 
     subject: StrictStr = Field(description="Header 'Subject' field.")
 
-    time: StrictInt = Field(description="Receive time stamp")
+    time: int = Field(description="Receive time stamp")
 
     __properties: ClassVar[List[str]] = ["bytes", "content", "envelope_sender", "from", "header", "id", "receiver", "sender", "spaminfo", "spamlevel", "subject", "time"]
 

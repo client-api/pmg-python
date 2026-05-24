@@ -28,7 +28,7 @@ class QuarantineAttachmentResponseDataInner(BaseModel):
     QuarantineAttachmentResponseDataInner
     """ # noqa: E501
 
-    bytes: StrictInt = Field(description="Size of raw email.")
+    bytes: int = Field(description="Size of raw email.")
 
     envelope_sender: StrictStr = Field(description="SMTP envelope sender.")
 
@@ -42,7 +42,7 @@ class QuarantineAttachmentResponseDataInner(BaseModel):
 
     subject: StrictStr = Field(description="Header 'Subject' field.")
 
-    time: StrictInt = Field(description="Receive time stamp")
+    time: int = Field(description="Receive time stamp")
 
     __properties: ClassVar[List[str]] = ["bytes", "envelope_sender", "from", "id", "receiver", "sender", "subject", "time"]
 

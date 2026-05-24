@@ -28,13 +28,13 @@ class StatisticsContactResponseDataInner(BaseModel):
     StatisticsContactResponseDataInner
     """ # noqa: E501
 
-    bytes: Union[StrictFloat, StrictInt] = Field(description="Mail traffic (Bytes).")
+    bytes: Union[float, int] = Field(description="Mail traffic (Bytes).")
 
     contact: StrictStr = Field(description="Contact email.")
 
-    count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Mail count.")
+    count: Optional[Union[float, int]] = Field(default=None, description="Mail count.")
 
-    viruscount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of sent virus mails.")
+    viruscount: Optional[Union[float, int]] = Field(default=None, description="Number of sent virus mails.")
 
     __properties: ClassVar[List[str]] = ["bytes", "contact", "count", "viruscount"]
 

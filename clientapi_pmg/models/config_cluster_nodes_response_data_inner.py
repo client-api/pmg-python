@@ -28,7 +28,7 @@ class ConfigClusterNodesResponseDataInner(BaseModel):
     ConfigClusterNodesResponseDataInner
     """ # noqa: E501
 
-    cid: StrictInt
+    cid: int
 
     fingerprint: StrictStr
 

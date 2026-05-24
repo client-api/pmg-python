@@ -28,41 +28,41 @@ class StatisticsMailResponseData(BaseModel):
     StatisticsMailResponseData
     """ # noqa: E501
 
-    avptime: Union[StrictFloat, StrictInt] = Field(description="Average mail processing time in seconds.")
+    avptime: Union[float, int] = Field(description="Average mail processing time in seconds.")
 
-    bounces_in: Union[StrictFloat, StrictInt] = Field(description="Incoming bounce mail count (sender = <>).")
+    bounces_in: Union[float, int] = Field(description="Incoming bounce mail count (sender = <>).")
 
-    bounces_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing bounce mail count (sender = <>).")
+    bounces_out: Union[float, int] = Field(description="Outgoing bounce mail count (sender = <>).")
 
-    bytes_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail traffic (bytes).")
+    bytes_in: Union[float, int] = Field(description="Incoming mail traffic (bytes).")
 
-    bytes_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail traffic (bytes).")
+    bytes_out: Union[float, int] = Field(description="Outgoing mail traffic (bytes).")
 
-    count: Union[StrictFloat, StrictInt] = Field(description="Overall mail count (in and out).")
+    count: Union[float, int] = Field(description="Overall mail count (in and out).")
 
-    count_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail count.")
+    count_in: Union[float, int] = Field(description="Incoming mail count.")
 
-    count_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail count.")
+    count_out: Union[float, int] = Field(description="Outgoing mail count.")
 
-    glcount: Union[StrictFloat, StrictInt] = Field(description="Number of greylisted mails.")
+    glcount: Union[float, int] = Field(description="Number of greylisted mails.")
 
-    junk_in: Union[StrictFloat, StrictInt] = Field(description="Incoming junk mail count (viruscount_in + spamcount_in + glcount + spfcount + rbl_rejects + pregreet_rejects).")
+    junk_in: Union[float, int] = Field(description="Incoming junk mail count (viruscount_in + spamcount_in + glcount + spfcount + rbl_rejects + pregreet_rejects).")
 
-    junk_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing junk mail count (viruscount_out + spamcount_out).")
+    junk_out: Union[float, int] = Field(description="Outgoing junk mail count (viruscount_out + spamcount_out).")
 
-    pregreet_rejects: StrictInt = Field(description="PREGREET reject count.")
+    pregreet_rejects: int = Field(description="PREGREET reject count.")
 
-    rbl_rejects: StrictInt = Field(description="Number of RBL rejects.")
+    rbl_rejects: int = Field(description="Number of RBL rejects.")
 
-    spamcount_in: Union[StrictFloat, StrictInt] = Field(description="Incoming spam mails.")
+    spamcount_in: Union[float, int] = Field(description="Incoming spam mails.")
 
-    spamcount_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing spam mails.")
+    spamcount_out: Union[float, int] = Field(description="Outgoing spam mails.")
 
-    spfcount: Union[StrictFloat, StrictInt] = Field(description="Mails rejected by SPF.")
+    spfcount: Union[float, int] = Field(description="Mails rejected by SPF.")
 
-    viruscount_in: Union[StrictFloat, StrictInt] = Field(description="Number of incoming virus mails.")
+    viruscount_in: Union[float, int] = Field(description="Number of incoming virus mails.")
 
-    viruscount_out: Union[StrictFloat, StrictInt] = Field(description="Number of outgoing virus mails.")
+    viruscount_out: Union[float, int] = Field(description="Number of outgoing virus mails.")
 
     __properties: ClassVar[List[str]] = ["avptime", "bounces_in", "bounces_out", "bytes_in", "bytes_out", "count", "count_in", "count_out", "glcount", "junk_in", "junk_out", "pregreet_rejects", "rbl_rejects", "spamcount_in", "spamcount_out", "spfcount", "viruscount_in", "viruscount_out"]
 

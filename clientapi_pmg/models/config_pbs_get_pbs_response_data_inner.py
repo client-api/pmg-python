@@ -39,17 +39,17 @@ class ConfigPbsGetPbsResponseDataInner(BaseModel):
 
     include_statistics: Optional[PmgBoolean] = Field(default=None, description="Include statistics in scheduled backups", alias="include-statistics")
 
-    keep_daily: Optional[StrictInt] = Field(default=None, description="Keep backups for the last <N> different days. If there is more than one backup for a single day, only the latest one is kept.", alias="keep-daily")
+    keep_daily: Optional[int] = Field(default=None, description="Keep backups for the last <N> different days. If there is more than one backup for a single day, only the latest one is kept.", alias="keep-daily")
 
-    keep_hourly: Optional[StrictInt] = Field(default=None, description="Keep backups for the last <N> different hours. If there is more than one backup for a single hour, only the latest one is kept.", alias="keep-hourly")
+    keep_hourly: Optional[int] = Field(default=None, description="Keep backups for the last <N> different hours. If there is more than one backup for a single hour, only the latest one is kept.", alias="keep-hourly")
 
-    keep_last: Optional[StrictInt] = Field(default=None, description="Keep the last <N> backups.", alias="keep-last")
+    keep_last: Optional[int] = Field(default=None, description="Keep the last <N> backups.", alias="keep-last")
 
-    keep_monthly: Optional[StrictInt] = Field(default=None, description="Keep backups for the last <N> different months. If there is more than one backup for a single month, only the latest one is kept.", alias="keep-monthly")
+    keep_monthly: Optional[int] = Field(default=None, description="Keep backups for the last <N> different months. If there is more than one backup for a single month, only the latest one is kept.", alias="keep-monthly")
 
-    keep_weekly: Optional[StrictInt] = Field(default=None, description="Keep backups for the last <N> different weeks. If there ismore than one backup for a single week, only the latest one is kept.", alias="keep-weekly")
+    keep_weekly: Optional[int] = Field(default=None, description="Keep backups for the last <N> different weeks. If there ismore than one backup for a single week, only the latest one is kept.", alias="keep-weekly")
 
-    keep_yearly: Optional[StrictInt] = Field(default=None, description="Keep backups for the last <N> different years. If there is more than one backup for a single year, only the latest one is kept.", alias="keep-yearly")
+    keep_yearly: Optional[int] = Field(default=None, description="Keep backups for the last <N> different years. If there is more than one backup for a single year, only the latest one is kept.", alias="keep-yearly")
 
     namespace: Optional[Annotated[str, Field(strict=True, max_length=256)]] = Field(default=None, description="Proxmox Backup Server namespace in the datastore, defaults to the root NS.")
 

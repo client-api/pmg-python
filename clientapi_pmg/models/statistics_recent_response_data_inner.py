@@ -28,31 +28,31 @@ class StatisticsRecentResponseDataInner(BaseModel):
     StatisticsRecentResponseDataInner
     """ # noqa: E501
 
-    bytes_in: Union[StrictFloat, StrictInt] = Field(description="Number of incoming bytes mails.")
+    bytes_in: Union[float, int] = Field(description="Number of incoming bytes mails.")
 
-    bytes_out: Union[StrictFloat, StrictInt] = Field(description="Number of outgoing bytes mails.")
+    bytes_out: Union[float, int] = Field(description="Number of outgoing bytes mails.")
 
-    count: Union[StrictFloat, StrictInt] = Field(description="Overall mail count (in and out).")
+    count: Union[float, int] = Field(description="Overall mail count (in and out).")
 
-    count_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail count.")
+    count_in: Union[float, int] = Field(description="Incoming mail count.")
 
-    count_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail count.")
+    count_out: Union[float, int] = Field(description="Outgoing mail count.")
 
-    index: StrictInt = Field(description="Time index.")
+    index: int = Field(description="Time index.")
 
-    spam: Union[StrictFloat, StrictInt] = Field(description="Overall spam mail count (in and out).")
+    spam: Union[float, int] = Field(description="Overall spam mail count (in and out).")
 
-    spam_in: Union[StrictFloat, StrictInt] = Field(description="Incoming spam mails (spamcount_in + glcount + spfcount).")
+    spam_in: Union[float, int] = Field(description="Incoming spam mails (spamcount_in + glcount + spfcount).")
 
-    spam_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing spam mails.")
+    spam_out: Union[float, int] = Field(description="Outgoing spam mails.")
 
-    time: StrictInt = Field(description="Time (Unix epoch).")
+    time: int = Field(description="Time (Unix epoch).")
 
-    timespan: Union[StrictFloat, StrictInt] = Field(description="Timespan in seconds for one data point")
+    timespan: Union[float, int] = Field(description="Timespan in seconds for one data point")
 
-    virus_in: Union[StrictFloat, StrictInt] = Field(description="Number of incoming virus mails.")
+    virus_in: Union[float, int] = Field(description="Number of incoming virus mails.")
 
-    virus_out: Union[StrictFloat, StrictInt] = Field(description="Number of outgoing virus mails.")
+    virus_out: Union[float, int] = Field(description="Number of outgoing virus mails.")
 
     __properties: ClassVar[List[str]] = ["bytes_in", "bytes_out", "count", "count_in", "count_out", "index", "spam", "spam_in", "spam_out", "time", "timespan", "virus_in", "virus_out"]
 

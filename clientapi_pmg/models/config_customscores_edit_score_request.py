@@ -33,7 +33,7 @@ class ConfigCustomscoresEditScoreRequest(BaseModel):
 
     digest: Optional[Annotated[str, Field(strict=True, max_length=64)]] = Field(default=None, description="Prevent changes if current configuration file has a different digest. This can be used to prevent concurrent modifications.")
 
-    score: Union[StrictFloat, StrictInt] = Field(description="The score the rule should be valued at.")
+    score: Union[float, int] = Field(description="The score the rule should be valued at.")
 
     __properties: ClassVar[List[str]] = ["comment", "digest", "score"]
 

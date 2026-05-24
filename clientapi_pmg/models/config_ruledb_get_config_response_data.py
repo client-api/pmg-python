@@ -28,7 +28,7 @@ class ConfigRuledbGetConfigResponseData(BaseModel):
     ConfigRuledbGetConfigResponseData
     """ # noqa: E501
 
-    id: StrictInt
+    id: int
 
     info: StrictStr
 

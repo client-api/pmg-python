@@ -33,7 +33,7 @@ class ConfigCustomscoresGetScoreResponseData(BaseModel):
 
     name: Annotated[str, Field(strict=True)] = Field(description="The name of the rule.")
 
-    score: Union[StrictFloat, StrictInt] = Field(description="The score the rule should be valued at.")
+    score: Union[float, int] = Field(description="The score the rule should be valued at.")
 
     __properties: ClassVar[List[str]] = ["comment", "name", "score"]
 

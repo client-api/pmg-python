@@ -35,7 +35,7 @@ class ConfigTransportGetTransportResponseDataInner(BaseModel):
 
     host: StrictStr
 
-    port: StrictInt
+    port: int
 
     protocol: StrictStr
 

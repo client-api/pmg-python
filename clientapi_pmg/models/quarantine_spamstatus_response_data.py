@@ -28,13 +28,13 @@ class QuarantineSpamstatusResponseData(BaseModel):
     QuarantineSpamstatusResponseData
     """ # noqa: E501
 
-    avgbytes: Union[StrictFloat, StrictInt] = Field(description="Average size of stored mails in bytes.")
+    avgbytes: Union[float, int] = Field(description="Average size of stored mails in bytes.")
 
-    avgspam: Union[StrictFloat, StrictInt] = Field(description="Average spam level.")
+    avgspam: Union[float, int] = Field(description="Average spam level.")
 
-    count: StrictInt = Field(description="Number of stored mails.")
+    count: int = Field(description="Number of stored mails.")
 
-    mbytes: Union[StrictFloat, StrictInt] = Field(description="Estimated disk space usage in MByte.")
+    mbytes: Union[float, int] = Field(description="Estimated disk space usage in MByte.")
 
     __properties: ClassVar[List[str]] = ["avgbytes", "avgspam", "count", "mbytes"]
 

@@ -28,25 +28,25 @@ class StatisticsMaildistributionResponseDataInner(BaseModel):
     StatisticsMaildistributionResponseDataInner
     """ # noqa: E501
 
-    bounces_in: Union[StrictFloat, StrictInt] = Field(description="Incoming bounce mail count (sender = <>).")
+    bounces_in: Union[float, int] = Field(description="Incoming bounce mail count (sender = <>).")
 
-    bounces_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing bounce mail count (sender = <>).")
+    bounces_out: Union[float, int] = Field(description="Outgoing bounce mail count (sender = <>).")
 
-    count: Union[StrictFloat, StrictInt] = Field(description="Overall mail count (in and out).")
+    count: Union[float, int] = Field(description="Overall mail count (in and out).")
 
-    count_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail count.")
+    count_in: Union[float, int] = Field(description="Incoming mail count.")
 
-    count_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail count.")
+    count_out: Union[float, int] = Field(description="Outgoing mail count.")
 
-    index: StrictInt = Field(description="Hour (0-23).")
+    index: int = Field(description="Hour (0-23).")
 
-    spamcount_in: Union[StrictFloat, StrictInt] = Field(description="Incoming spam mails (spamcount_in + glcount + spfcount).")
+    spamcount_in: Union[float, int] = Field(description="Incoming spam mails (spamcount_in + glcount + spfcount).")
 
-    spamcount_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing spam mails.")
+    spamcount_out: Union[float, int] = Field(description="Outgoing spam mails.")
 
-    viruscount_in: Union[StrictFloat, StrictInt] = Field(description="Number of incoming virus mails.")
+    viruscount_in: Union[float, int] = Field(description="Number of incoming virus mails.")
 
-    viruscount_out: Union[StrictFloat, StrictInt] = Field(description="Number of outgoing virus mails.")
+    viruscount_out: Union[float, int] = Field(description="Number of outgoing virus mails.")
 
     __properties: ClassVar[List[str]] = ["bounces_in", "bounces_out", "count", "count_in", "count_out", "index", "spamcount_in", "spamcount_out", "viruscount_in", "viruscount_out"]
 

@@ -29,7 +29,7 @@ class NodesTasksReadTaskStatusResponseData(BaseModel):
     NodesTasksReadTaskStatusResponseData
     """ # noqa: E501
 
-    pid: StrictInt
+    pid: int
 
     status: PmgNodesTasksStatusEnum
 

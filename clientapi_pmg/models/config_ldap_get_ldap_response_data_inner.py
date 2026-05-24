@@ -33,9 +33,9 @@ class ConfigLdapGetLdapResponseDataInner(BaseModel):
 
     disable: PmgBoolean
 
-    gcount: Optional[StrictInt] = None
+    gcount: Optional[int] = None
 
-    mcount: Optional[StrictInt] = None
+    mcount: Optional[int] = None
 
     mode: StrictStr
 
@@ -45,7 +45,7 @@ class ConfigLdapGetLdapResponseDataInner(BaseModel):
 
     server2: Optional[StrictStr] = None
 
-    ucount: Optional[StrictInt] = None
+    ucount: Optional[int] = None
 
     __properties: ClassVar[List[str]] = ["comment", "disable", "gcount", "mcount", "mode", "profile", "server1", "server2", "ucount"]
 

@@ -30,7 +30,7 @@ class ConfigLdapProfileListGroupsResponseDataInner(BaseModel):
 
     dn: StrictStr
 
-    gid: Union[StrictFloat, StrictInt]
+    gid: Union[float, int]
 
     __properties: ClassVar[List[str]] = ["dn", "gid"]
 

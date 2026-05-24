@@ -28,7 +28,7 @@ class StatisticsVirusResponseDataInner(BaseModel):
     StatisticsVirusResponseDataInner
     """ # noqa: E501
 
-    count: StrictInt = Field(description="Detection count.")
+    count: int = Field(description="Detection count.")
 
     name: StrictStr = Field(description="Virus name.")
 

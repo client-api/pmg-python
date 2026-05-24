@@ -28,7 +28,7 @@ class ConfigClusterAddNodeResponseDataInner(BaseModel):
     ConfigClusterAddNodeResponseDataInner
     """ # noqa: E501
 
-    cid: StrictInt
+    cid: int
 
     __properties: ClassVar[List[str]] = ["cid"]
 

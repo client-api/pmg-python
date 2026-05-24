@@ -30,11 +30,11 @@ class QuarantineListattachmentsResponseDataInner(BaseModel):
 
     content_type: StrictStr = Field(description="Raw email header data.", alias="content-type")
 
-    id: StrictInt = Field(description="Attachment ID")
+    id: int = Field(description="Attachment ID")
 
     name: StrictStr = Field(description="Raw email header data.")
 
-    size: StrictInt = Field(description="Size of raw attachment in bytes.")
+    size: int = Field(description="Size of raw attachment in bytes.")
 
     __properties: ClassVar[List[str]] = ["content-type", "id", "name", "size"]
 

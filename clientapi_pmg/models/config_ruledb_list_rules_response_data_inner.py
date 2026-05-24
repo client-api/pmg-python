@@ -28,7 +28,7 @@ class ConfigRuledbListRulesResponseDataInner(BaseModel):
     ConfigRuledbListRulesResponseDataInner
     """ # noqa: E501
 
-    id: StrictInt
+    id: int
 
     __properties: ClassVar[List[str]] = ["id"]
 

@@ -28,23 +28,23 @@ class StatisticsDomainsResponseDataInner(BaseModel):
     StatisticsDomainsResponseDataInner
     """ # noqa: E501
 
-    bytes_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail traffic (Bytes).")
+    bytes_in: Union[float, int] = Field(description="Incoming mail traffic (Bytes).")
 
-    bytes_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail traffic (Bytes).")
+    bytes_out: Union[float, int] = Field(description="Outgoing mail traffic (Bytes).")
 
-    count_in: Union[StrictFloat, StrictInt] = Field(description="Incoming mail count.")
+    count_in: Union[float, int] = Field(description="Incoming mail count.")
 
-    count_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing mail count.")
+    count_out: Union[float, int] = Field(description="Outgoing mail count.")
 
     domain: StrictStr = Field(description="Domain name.")
 
-    spamcount_in: Union[StrictFloat, StrictInt] = Field(description="Incoming spam mails.")
+    spamcount_in: Union[float, int] = Field(description="Incoming spam mails.")
 
-    spamcount_out: Union[StrictFloat, StrictInt] = Field(description="Outgoing spam mails.")
+    spamcount_out: Union[float, int] = Field(description="Outgoing spam mails.")
 
-    viruscount_in: Union[StrictFloat, StrictInt] = Field(description="Number of incoming virus mails.")
+    viruscount_in: Union[float, int] = Field(description="Number of incoming virus mails.")
 
-    viruscount_out: Union[StrictFloat, StrictInt] = Field(description="Number of outgoing virus mails.")
+    viruscount_out: Union[float, int] = Field(description="Number of outgoing virus mails.")
 
     __properties: ClassVar[List[str]] = ["bytes_in", "bytes_out", "count_in", "count_out", "domain", "spamcount_in", "spamcount_out", "viruscount_in", "viruscount_out"]
 

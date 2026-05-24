@@ -30,7 +30,7 @@ class NodesClamavDatabaseStatusResponseDataInner(BaseModel):
 
     build_time: StrictStr
 
-    nsigs: StrictInt
+    nsigs: int
 
     type: StrictStr
 

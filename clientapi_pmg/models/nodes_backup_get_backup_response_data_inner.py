@@ -31,9 +31,9 @@ class NodesBackupGetBackupResponseDataInner(BaseModel):
 
     filename: Annotated[str, Field(min_length=4, strict=True, max_length=256)] = Field(description="The backup file name.")
 
-    size: StrictInt = Field(description="Size of backup file in bytes.")
+    size: int = Field(description="Size of backup file in bytes.")
 
-    timestamp: StrictInt = Field(description="Backup timestamp (Unix epoch).")
+    timestamp: int = Field(description="Backup timestamp (Unix epoch).")
 
     __properties: ClassVar[List[str]] = ["filename", "size", "timestamp"]
 

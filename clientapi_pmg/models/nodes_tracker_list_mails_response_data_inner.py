@@ -45,9 +45,9 @@ class NodesTrackerListMailsResponseDataInner(BaseModel):
 
     rstatus: Optional[Annotated[str, Field(min_length=1, strict=True, max_length=1)]] = Field(default=None, description="Delivery status of relayed mail.")
 
-    size: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The size of the raw email.")
+    size: Optional[Union[float, int]] = Field(default=None, description="The size of the raw email.")
 
-    time: StrictInt = Field(description="Delivery timestamp.")
+    time: int = Field(description="Delivery timestamp.")
 
     to: StrictStr = Field(description="Receiver email address.")
 

@@ -28,7 +28,7 @@ class ConfigRuledbAddActionGroupRequest(BaseModel):
     ConfigRuledbAddActionGroupRequest
     """ # noqa: E501
 
-    ogroup: StrictInt = Field(description="Groups ID.")
+    ogroup: int = Field(description="Groups ID.")
 
     __properties: ClassVar[List[str]] = ["ogroup"]
 

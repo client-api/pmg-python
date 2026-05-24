@@ -31,13 +31,13 @@ class ConfigRuledbConfigResponseData(BaseModel):
 
     active: PmgBoolean
 
-    direction: StrictInt
+    direction: int
 
-    id: StrictInt
+    id: int
 
     name: StrictStr
 
-    priority: StrictInt
+    priority: int
 
     __properties: ClassVar[List[str]] = ["active", "direction", "id", "name", "priority"]
 

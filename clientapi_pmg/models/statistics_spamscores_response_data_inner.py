@@ -28,11 +28,11 @@ class StatisticsSpamscoresResponseDataInner(BaseModel):
     StatisticsSpamscoresResponseDataInner
     """ # noqa: E501
 
-    count: StrictInt = Field(description="Detection count.")
+    count: int = Field(description="Detection count.")
 
     level: StrictStr = Field(description="Spam level.")
 
-    ratio: Union[StrictFloat, StrictInt] = Field(description="Portion of overall mail count.")
+    ratio: Union[float, int] = Field(description="Portion of overall mail count.")
 
     __properties: ClassVar[List[str]] = ["count", "level", "ratio"]
 

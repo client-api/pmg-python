@@ -28,7 +28,7 @@ class QuarantineSpamResponseDataInner(BaseModel):
     QuarantineSpamResponseDataInner
     """ # noqa: E501
 
-    bytes: StrictInt = Field(description="Size of raw email.")
+    bytes: int = Field(description="Size of raw email.")
 
     envelope_sender: StrictStr = Field(description="SMTP envelope sender.")
 
@@ -40,11 +40,11 @@ class QuarantineSpamResponseDataInner(BaseModel):
 
     sender: Optional[StrictStr] = Field(default=None, description="Header 'Sender' field.")
 
-    spamlevel: Union[StrictFloat, StrictInt] = Field(description="Spam score.")
+    spamlevel: Union[float, int] = Field(description="Spam score.")
 
     subject: StrictStr = Field(description="Header 'Subject' field.")
 
-    time: StrictInt = Field(description="Receive time stamp")
+    time: int = Field(description="Receive time stamp")
 
     __properties: ClassVar[List[str]] = ["bytes", "envelope_sender", "from", "id", "receiver", "sender", "spamlevel", "subject", "time"]
 

@@ -35,7 +35,7 @@ class AccessUsersGetUsersResponseDataInner(BaseModel):
 
     role: StrictStr
 
-    tfa_locked_until: Optional[StrictInt] = Field(default=None, description="Contains a timestamp until when a user is locked out of 2nd factors.", alias="tfa-locked-until")
+    tfa_locked_until: Optional[int] = Field(default=None, description="Contains a timestamp until when a user is locked out of 2nd factors.", alias="tfa-locked-until")
 
     totp_locked: Optional[PmgBoolean] = Field(default=None, description="True if the user is currently locked out of TOTP factors.", alias="totp-locked")
 
