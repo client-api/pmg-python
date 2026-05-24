@@ -19,9 +19,7 @@ jobs:
           cache: pip
 
       - name: Install package + test deps
-        run: |
-          pip install -e .
-          pip install 'pytest>=8' 'pytest-timeout>=2.3' 'requests>=2.32'
+        run: pip install -e .[test]
 
       - name: Authenticate to GHCR
         uses: docker/login-action@v3
